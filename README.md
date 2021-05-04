@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+## Demo Website which uses HTTP protocols to fetch, post and modify data on a webserver
 
-You can use the [editor on GitHub](https://github.com/HabeebUllahTabrez/http-requests-demo/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+All the posts which were in the project were fetched from jsonplaceholder website:
+[https://jsonplaceholder.typicode.com/](url)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+You can view the reqests made by viewing the Networks section in your browser developer tools.
 
-### Markdown
+Fetching the posts uses the GET method to fetch data from the server
+Adding the posts uses the POST method to send data to the server
+Deleting the posts uses the DELETE method to delete data from the server
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Apart from these, there are other methods which perform specific tasks 
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/HabeebUllahTabrez/http-requests-demo/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+This website is open sourced so If you guys find that this website needs improvements, you can make changes and improve it!
+This is just a dummy website:))
