@@ -56,6 +56,16 @@ function sendHttpRequest(method, url, data) {
     // ------------------------------------------------------
 }
 
+// A function which creates a DOM node
+function generatePostTemplate(post) {
+    const postEl = document.importNode(postTemplate.content, true);
+    postEl.querySelector("h2").textContent = post.title.toUpperCase();
+    postEl.querySelector("p").textContent = post.body.toUpperCase();
+    postEl.querySelector("li").id = post.id;
+
+    return postEl;
+}
+
 // Fetch posts button which uses the get method to fetch data from the server
 async function fetchPosts() {
     try {
@@ -66,14 +76,7 @@ async function fetchPosts() {
         const responsePosts = responseData;
 
         for (i = 0; i < 10; i++) {
-            const postEl = document.importNode(postTemplate.content, true);
-            postEl.querySelector("h2").textContent = responsePosts[
-                i
-            ].title.toUpperCase();
-            postEl.querySelector("p").textContent = responsePosts[
-                i
-            ].body.toUpperCase();
-            postEl.querySelector("li").id = responsePosts[i].id;
+            const postEl = generatePostTemplate(responsePosts[i]);
             listElement.append(postEl);
         }
     } catch (error) {
@@ -87,7 +90,11 @@ async function createPost(title, content) {
         title,
         body: content,
         userId,
+        id : listElement.childElementCount + 1
     };
+
+    const postEl = generatePostTemplate(post);
+    listElement.prepend(postEl);
 
     sendHttpRequest("POST", "https://jsonplaceholder.typicode.com/posts", post);
 }
